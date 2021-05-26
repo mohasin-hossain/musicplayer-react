@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
+  faPause,
   faAngleLeft,
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
@@ -69,7 +70,7 @@ const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
         <FontAwesomeIcon
           onClick={playSongHandler}
           className="play"
-          icon={faPlay}
+          icon={isPlaying ? faPause : faPlay}
           size="2x"
         />
         <FontAwesomeIcon

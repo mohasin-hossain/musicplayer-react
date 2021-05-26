@@ -2,10 +2,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 20rem;
+  width: 19rem;
   height: 100%;
   box-shadow: 2px 2px 50px rgb(209, 203, 203);
   overflow: scroll;
+  transform: translateX(-100%);
+  transition: all .5s ease;
+  opacity: 0;
+
   h2 {
     padding: 2rem;
   }
@@ -57,4 +61,9 @@
 
 .selected {
   background-color: rgb(222, 222, 255);
+}
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
 }

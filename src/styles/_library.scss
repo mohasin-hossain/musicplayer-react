@@ -2,13 +2,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 19rem;
+  width: 20rem;
   height: 100%;
   background: white;
   box-shadow: 2px 2px 50px rgb(209, 203, 203);
   overflow: scroll;
   transform: translateX(-100%);
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   opacity: 0;
 
   h2 {
@@ -21,6 +21,7 @@
   align-items: center;
   padding: 1rem 2rem 1rem 2rem;
   cursor: pointer;
+  transition: all 0.5s ease;
 
   img {
     width: 30%;
@@ -67,4 +68,17 @@
 .active-library {
   transform: translateX(0%);
   opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+
+    h2 {
+      padding: 1rem;
+    }
+  }
+  .library-song {
+    padding: 1rem 2rem 1rem 1rem;
+  }
 }

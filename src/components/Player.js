@@ -56,7 +56,7 @@ const Player = ({
     audioRef.current.currentTime = e.target.value;
     setSongInfo({
       ...songInfo,
-      duration: e.target.duration,
+      currentTime: e.target.value,
     });
   };
 

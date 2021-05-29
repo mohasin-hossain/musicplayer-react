@@ -16,25 +16,8 @@ const Player = ({
   audioRef,
   setCurrentSong,
   songs,
-  setSongs,
+  activeLibraryHandler,
 }) => {
-  const activeLibraryHandler = (nextPrev) => {
-    const newSong = songs.map((song) => {
-      if (song.id === nextPrev.id) {
-        return {
-          ...song,
-          active: true,
-        };
-      } else {
-        return {
-          ...song,
-          active: false,
-        };
-      }
-    });
-    setSongs(newSong);
-  };
-
   // Event Handlers
   const playSongHandler = () => {
     if (isPlaying) {
